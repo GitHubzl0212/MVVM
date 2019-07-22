@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Dcument</title>
+    </head>
+    <body>
+        <div id="app">
+            <input type="text" v-model="message.a">
+            {{message.a}}
+            <div>我是分界线</div>
+            <ul><li>{{b}}</li></ul>
+        </div>
+        <script src="watcher.js"></script>
+        <script src="observer.js"></script>
+        <script src="compile.js"></script>
+        <script src="mvvm.js"></script>
+        <script>
+            let vm = new MVVM({
+                el: "#app",  // 也可以写成el: document.getElementById("app");
+                data: {
+                    message: {
+                        a: "hello zl"
+                    },
+                    b: "hello gyz"
+                }
+            })
+        </script>
+    </body>
+</html>
